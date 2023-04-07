@@ -120,7 +120,7 @@ function copiar(){
     }).then(
       (result)=>{
         if(result.isConfirmed){
-          btn();
+          btn({show_swal: true});
         }
       }
     )
@@ -139,7 +139,7 @@ function copiar(){
     }).then(
       (confirm)=>{
         if(confirm.isConfirmed){
-          btn();
+          btn({show_swal: true});
         }
       }
     )
@@ -233,7 +233,7 @@ function senha(letrasMin, letrasMai, numbers, caracEspeciais, tamanho, show_swal
             }).then(
               (confirm)=>{
                 if(confirm.isConfirmed){
-                  btn();
+                  btn({show_swal: true});
                 }
               }
               )
