@@ -9,6 +9,7 @@ Gerador de senha que permite a personalização da senha gerada aleatoriamente
 - Definir uma quantidade de caracteres para as senhas
 - Copiar a senha gerada
 - Resetar os parâmetros de personalização de senhas
+- Verificar a qualidade das senhas
 
 ## Como funciona?
 
