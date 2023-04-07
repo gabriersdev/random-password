@@ -244,3 +244,70 @@ function senha(letrasMin, letrasMai, numbers, caracEspeciais, tamanho, show_swal
   
   document.querySelector('#button-send').setAttribute('onclick','btn({show_swal: true})');
 } 
+
+document.querySelector('#testar-senha').addEventListener('click', (evento) => {
+  const card_body = evento.target.parentElement.parentElement;
+  
+  const div = card_body.querySelector('div.form-group');
+  div.classList.contains('none') ? div.classList.remove('none') : '';
+  div.classList.add('fade-in');
+  
+  const input = div.querySelector('input');
+  input.focus();
+  input.addEventListener('input', () => {
+    verificarSenha(div);
+  });
+})
+
+function verificarSenha(div){
+  // Parâmetros para verificação da qualidade da senha 
+  let parametros = {
+    count : false,
+    letters : false,
+    numbers : false,
+    special : false
+  }
+
+  let texto = null;
+  let senha = document.querySelector("[data-input='senha-para-teste']").value.trim();
+  
+  const div_feedback = div.querySelector('.alert');
+  div_feedback.classList.contains('none') ? div_feedback.classList.remove('none') : '';
+
+  parametros.letters = (/[A-Za-z]+/.test(senha))? true : false;
+  parametros.numbers = (/[0-9]+/.test(senha))? true : false;
+  parametros.special = (/[!\"$%&/()=?@~`\\.\';:+=^*_-]+/.test(senha))? true : false;
+  parametros.count = (senha.length > 7)? true : false;
+
+  let filtro = Object.values(parametros).filter(value => value);
+
+  switch(filtro.length){
+    case 4:
+    if(senha.length > 12){
+      div_feedback.classList.value = 'alert alert-success mt-2';
+      texto = 'Senha forte';
+      break;
+    }
+    
+    case 3:
+    if(senha.length > 10){
+      div_feedback.classList.value = 'alert alert-primary mt-2';
+      texto = 'Boa senha';
+      break;
+    }
+      
+    case 2:
+    texto = 'Senha média';
+    div_feedback.classList.value = 'alert alert-warning mt-2';
+    break;
+    
+    case 1:    
+    case 0:
+    default:
+    div_feedback.classList.value = 'alert alert-danger mt-2';
+    texto = 'Senha fraca';
+    break; 
+  }
+
+  div.querySelector("#mensagem").textContent = texto;
+}

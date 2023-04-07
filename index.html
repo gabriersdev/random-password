@@ -36,7 +36,7 @@
           <div class="card-body">
             <div class="principal">
               <div class="input-group">
-                <input type="text" class="form-control saida-senha form-control-plaintext" style="border: none" name="print-password" id="print-password" readonly placeholder="&nbsp; A senha aparecerá aqui">
+                <input type="text" class="form-control saida-senha form-control-plaintext texto-monospace" style="border: none" name="print-password" id="print-password" readonly placeholder="&nbsp; A senha aparecerá aqui">
                 <button onclick="copiar()"  id="btn-copy" class="botoes-elementos" data-toggle="tooltip" data-placement="top" title="Copiar" data-bs-custom-class="custom-tooltip"><i class="fa fa-clipboard icon-copy" aria-hidden="true" title="Copiar"></i></button>
                 <button onclick="resetar()" id="btn-refresh" class="botoes-elementos" data-toggle="tooltip" data-placement="top" title="Resetar" data-bs-custom-class="custom-tooltip"><i class="fa fa-refresh icon-refresh" aria-hidden="true" title="Nova senha"></i></button>
               </div>
@@ -99,7 +99,20 @@
             </center>
           </div>
         </div><br>
-
+        <div class="card">
+          <div class="card-body">
+            <div class="header-card-testar-qualidade-senha">
+              <b>Teste sua senha</b>
+              <button class="btn btn-outline-primary" id="testar-senha">Testar</button>
+            </div>
+            <div class="form-group mt-3 none">
+              <input type="text" class="form-control texto-monospace" placeholder="Sua senha para teste" data-input="senha-para-teste">              
+              <div class="alert alert-primary mt-2 none">
+                <small><span id="mensagem"></span></small>
+              </div>
+            </div>
+          </div>
+        </div><br>
         <div class="card">
           <div class="card-body">
             <div class="header-card-dicas-seguranca">

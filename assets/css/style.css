@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+@import url('./animacoes.css');
 *{
   font-family: "Ubuntu", sans-serif;
 }
@@ -29,6 +31,12 @@
   padding: 5px !important;
   background-color: #E9ECEF;
 }
+.texto-monospace{
+  font-family: 'JetBrains Mono', sans-serif;
+}
+.texto-monospace::placeholder{
+  font-family: "Ubuntu", sans-serif;
+}
 .elementos{
   display: flex;
   justify-content: space-evenly;
@@ -58,6 +66,7 @@ button:hover .icon-refresh{
   color: #0D6EFD;
   transition: .3s;
 }
+.header-card-testar-qualidade-senha,
 .header-card-dicas-seguranca{
   display: flex;
   justify-content: space-between;
@@ -67,4 +76,7 @@ button:hover .icon-refresh{
   --bs-tooltip-bg: #0D6EFD;
   --bs-tooltip-color: #FFF;
   --bs-tooltip-opacity: 1;
+}
+.none{
+  display: none;
 }
