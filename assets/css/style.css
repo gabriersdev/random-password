@@ -8,14 +8,12 @@
   font-size: 13pt;
   position: relative;
 }
-.container{
+.container, 
+.content{
   margin: 1rem 0;
 }
 .row{
   max-width: 100% !important;
-}
-.content{
-  margin: 1rem 0;
 }
 .fieldset{
   position: absolute;
