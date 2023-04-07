@@ -10,6 +10,13 @@ Gerador de senha que permite a personalização da senha gerada aleatoriamente
 - Copiar a senha gerada
 - Resetar os parâmetros de personalização de senhas
 
+## Como funciona?
+
+O usuário personaliza as senhas, escolhendo se ele vai ter ou não letras maiúsculas, números ou caracteres especiais e define um tamanho para a senha (por padrão é 12 caracteres). <br>
+Ao clicar no botão "Gerar senha" a função `btn()` é acionada, verifica os parâmetros definidos para a geração da senha e passam como argumento para a função `senha()`. <br>
+Esta função por sua vez cria aleatoriamente uma senha e preenche o `input:text` com o que foi gerado. <br>
+O usuário pode copiar a senha gerada clicando no botão "Copiar senha".
+
 ## Recursos utilizados
 
 - Fonte: Ubuntu
