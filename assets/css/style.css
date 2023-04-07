@@ -14,7 +14,7 @@
 }
 .fieldset{
   position: absolute;
-  border: 2px solid dodgerblue;
+  border: 2px solid #0D6EFD;
   border-radius: 5px;
 }
 .principal{
@@ -49,7 +49,9 @@
   --bs-tooltip-bg: var(--bs-primary);
 }
 .icon-copy:hover, 
-.icon-refresh:hover{
+button:hover .icon-copy, 
+.icon-refresh:hover,
+button:hover .icon-refresh{
   color: #0D6EFD;
   transition: .3s;
 }
