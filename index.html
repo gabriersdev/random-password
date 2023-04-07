@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="./assets/js/frameworks/jquery.js" defer></script>
+  <script src="./assets/js/frameworks/bootstrap.js" defer></script>
+  <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="body" onload="btn({show_swal: false})">
+  <div class="container">
+    <div class="row align-items-center justify-content-center" style="min-height: 100vh">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <b>Gerador de senha</b>
+          </div>
+          <div class="card-body">
+            <div class="principal">
+              <div class="input-group">
+                <input type="text" class="form-control saida-senha form-control-plaintext" style="border: none" name="print-password" id="print-password" readonly placeholder="&nbsp; A senha aparecerá aqui">
+                <button onclick="copiar()"  id="btn-copy" class="botoes-elementos"><i class="fa fa-clipboard icon-copy" aria-hidden="true" title="Copiar"></i></button>
+                <button onclick="resetar()" id="btn-refresh" class="botoes-elementos"><i class="fa fa-refresh icon-refresh" aria-hidden="true" title="Nova senha"></i></button>
+              </div>
+            </div><br>
+            <b>Configure sua senha</b>
+            <div class="form-check">
+              <label for="letras-min" id="label-letras-min">Letras minúsculas</label>
+              <input type="checkbox" class="form-check-input checkbox-formulario" id="letras-min" checked disabled>
+            </div>
+            <div class="form-check">
+              <label for="letras-mai" id="label-letras-mai">Letras maiúsculas</label>
+              <input type="checkbox" class="form-check-input checkbox-formulario" id="letras-mai" checked>
+            </div>
+            <div class="form-check">
+              <label for="numbers" id="label-numbers">Números</label>
+              <input type="checkbox" class="form-check-input checkbox-formulario" id="numbers" checked>
+            </div>
+            <div class="form-check">
+              <label for="carac-especiais" id="label-carac-especiais">Caracteres Especiais</label>
+              <input type="checkbox" class="form-check-input checkbox-formulario" id="carac-especiais" checked>
+            </div><br>
+            <div>
+              <center>
+                <div class="form-check form-check-inline">
+                  <label for="facil-pronuncia">Fácil de falar</label>
+                  <input type="radio" class="form-check-input" id="facil-pronuncia" name="difficult-level" onclick="selectCheckbox()">
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="facil-ler">Fácil de ler</label>
+                  <input type="radio" class="form-check-input" id="facil-ler" name="difficult-level" onclick="selectCheckbox()">
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="todos-caracteres">Tudo</label>
+                  <input type="radio" class="form-check-input" id="todos-caracteres" name="difficult-level" onclick="selectCheckbox()" checked>
+                </div>
+              </center>
+            </div><br>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Tamanho</label>
+              <select class="form-select" id="tamanho-password">
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12" selected>12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <center>
+              <div class="form-group button-password">
+                <button class="btn btn-outline-secondary" id="button-send" onclick="resetar()">Resetar</button>
+                <button class="btn btn-primary" id="button-send" onclick="btn()">Gerar senha</button>
+              </div>
+            </center>
+          </div>
+        </div><br>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="header-card-dicas-seguranca">
+              <b>Dicas de segurança</b>
+              <a href="https://www.kaspersky.com.br/resource-center/preemptive-safety/internet-privacy--security-5-safety-tips" target="_blank" class="btn btn-outline-info">Conferir</a>
+            </div>
+            <span class="mt-3 d-block">Guarde as suas senhas em um local seguro e use a verificação em duas etapas sempre que possível. Veja mais dicas de segurança no site da Kaspersky</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

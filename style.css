@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+.body{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13pt;
+  position: relative;
+}
+.container{
+  margin: 1rem 0;
+}
+.content{
+  margin: 1rem;
+}
+.fieldset{
+  position: absolute;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+}
+.principal{
+  position: relative;
+}
+.saida-senha{
+  width: auto;
+  font-size: 13pt;
+  padding: 5px !important;
+  background-color: #E9ECEF;
+}
+.elementos{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.botoes-elementos{
+  border: 0px solid transparent;
+  display: block;
+  outline: none;
+  padding: 0 0.5rem;
+}
+.botoes-elementos:hover,
+.botoes-elementos:focus{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.botoes-elementos:last-child{
+  margin-left: 1rem;
+  border-radius: 5px;
+}
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+.icon-copy:hover, 
+.icon-refresh:hover{
+  color: #0D6EFD;
+  transition: .3s;
+}
+.header-card-dicas-seguranca{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
