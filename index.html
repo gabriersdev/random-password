@@ -7,6 +7,7 @@
   <title>Gerador de Senhas</title>
   <link rel="stylesheet" href="./assets/css/frameworks/bootstrap.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/no-script.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
@@ -38,6 +39,21 @@
   <script src="./assets/js/script.js" defer></script>
 </head>
 <body class="body" onload="btn({show_swal: false})">
+  <noscript>
+    <div class="box-no-script">         
+      <div class="texto-pagina-centralizado-alt">
+        <h2 class="titulo-texto-pagina-centralizado">
+          Este site não funciona com o 
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
+        </h2>
+        <br>
+        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
+        <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+      </div>
+    </div>
+  </noscript>
+
   <div class="content">
     <div class="row d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 2rem); margin: 0">
       <div class="col-md-7">

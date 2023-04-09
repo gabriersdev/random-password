@@ -1,3 +1,9 @@
+document.querySelectorAll('[data-recarrega-pagina]').forEach(botao => {
+  botao.addEventListener('click', () => {
+      window.location.reload();
+  })
+})
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
