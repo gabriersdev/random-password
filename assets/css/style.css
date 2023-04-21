@@ -8,6 +8,11 @@
   font-size: 13pt;
   position: relative;
 }
+.body .content .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container, 
 .content{
   margin: 1rem 0;
