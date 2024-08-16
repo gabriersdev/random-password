@@ -49,9 +49,8 @@
           <div class="card-body">
             <div class="principal">
               <div class="input-group">
-                <input type="text" class="form-control saida-senha form-control-plaintext texto-monospace" style="border: none" name="print-password" id="print-password" readonly placeholder="&nbsp; A senha aparecerá aqui">
-                <button onclick="copiar()"  id="btn-copy" class="botoes-elementos" data-toggle="tooltip" data-placement="top" title="Copiar" data-bs-custom-class="custom-tooltip"><i class="fa fa-clipboard icon-copy" aria-hidden="true" title="Copiar"></i></button>
-                <button onclick="resetar()" id="btn-refresh" class="botoes-elementos" data-toggle="tooltip" data-placement="top" title="Resetar" data-bs-custom-class="custom-tooltip"><i class="fa fa-refresh icon-refresh" aria-hidden="true" title="Nova senha"></i></button>
+                <input type="text" class="form-control saida-senha border form-control-plaintext texto-monospace" style="border: none" name="print-password" id="print-password" readonly placeholder="&nbsp; A senha aparecerá aqui">
+                <button onclick="copiar()"  id="btn-copy" class="btn border" data-toggle="tooltip" data-placement="top" title="Copiar" data-bs-custom-class="custom-tooltip"><i class="fa fa-clipboard icon-copy" aria-hidden="true" title="Copiar"></i></button>
               </div>
             </div><br>
             <b>Configure sua senha</b>
@@ -72,20 +71,20 @@
               <input type="checkbox" class="form-check-input checkbox-formulario" id="carac-especiais" checked>
             </div><br>
             <div>
-              <center>
-                <div class="form-check form-check-inline">
-                  <label for="facil-pronuncia">Fácil de falar</label>
+              <div>
+                <div class="form-check form-check-inline d-block">
+                  <label for="facil-pronuncia" data-toggle="tooltip" data-placement="top" aria-label="Desabilita números e caracteres especiais" data-bs-original-title="Desabilita números e caracteres especiais">Fácil de falar</label>
                   <input type="radio" class="form-check-input" id="facil-pronuncia" name="difficult-level" onclick="selectCheckbox()">
                 </div>
-                <div class="form-check form-check-inline">
-                  <label for="facil-ler">Fácil de ler</label>
+                <div class="form-check form-check-inline d-block">
+                  <label for="facil-ler" data-toggle="tooltip" data-placement="top" aria-label="Marca apenas letras minúsculas e maiúsculas" data-bs-original-title="Marca apenas letras minúsculas e maiúsculas">Fácil de ler</label>
                   <input type="radio" class="form-check-input" id="facil-ler" name="difficult-level" onclick="selectCheckbox()">
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline d-block">
                   <label for="todos-caracteres">Tudo</label>
                   <input type="radio" class="form-check-input" id="todos-caracteres" name="difficult-level" onclick="selectCheckbox()" checked>
                 </div>
-              </center>
+              </div>
             </div><br>
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Tamanho</label>

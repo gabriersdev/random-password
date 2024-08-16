@@ -7,6 +7,7 @@
 .body{
   font-size: 13pt;
   position: relative;
+  background-color: #F6F6F6;
 }
 .body .content .row{
   display: flex;
@@ -32,7 +33,6 @@
   width: auto;
   font-size: 13pt;
   padding: 5px !important;
-  background-color: #E9ECEF;
 }
 .texto-monospace{
   font-family: 'JetBrains Mono', sans-serif;
