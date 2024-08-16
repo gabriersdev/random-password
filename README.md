@@ -2,6 +2,8 @@
 
 Gerador de senha que permite a personalização da senha gerada aleatoriamente
 
+![Captura de tela do projeto, com senha gerada como exemplo.](https://raw.githubusercontent.com/gabriersdev/random-password/master/assets/img/example.png)
+
 ## Funções
 
 - Gerar senhas aleatórias
